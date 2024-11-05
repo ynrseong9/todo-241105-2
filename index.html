@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>할 일 관리</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>할 일 관리</h1>
+        <div id="clock" class="clock"></div>
+      </header>
+
+      <div class="todo-input-container">
+        <input type="text" id="todoTitle" placeholder="할 일을 입력하세요" />
+        <textarea
+          id="todoDetails"
+          placeholder="세부 내용 (선택사항)"
+        ></textarea>
+        <button id="addTodo">추가</button>
+      </div>
+
+      <div class="filters">
+        <select id="statusFilter">
+          <option value="all">전체</option>
+          <option value="active">미완료</option>
+          <option value="completed">완료</option>
+        </select>
+        <select id="sortBy">
+          <option value="createdAt">생성일순</option>
+          <option value="title">제목순</option>
+        </select>
+        <input type="text" id="searchInput" placeholder="검색..." />
+      </div>
+
+      <ul id="todoList" class="todo-list"></ul>
+    </div>
+
+    <div id="notification" class="notification"></div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
